@@ -1,0 +1,17 @@
+instance_type = "t2.micro"
+ami = "ami-0c55b159cbfafe1f0" # Example AMI ID for Amazon Linux 2
+key_pair = "your-key-pair-name"
+desired_capacity = 2
+
+efs_file_system_name = "my-efs-volume"
+efs_performance_mode = "generalPurpose"
+efs_throughput_mode = "bursting"
+
+load_balancer_name = "my-load-balancer"
+load_balancer_port = 80
+target_group_port = 8080
+
+vpc_id = "your-vpc-id"
+subnet_ids = ["your-subnet-id-1", "your-subnet-id-2"]
+
+security_group_ids = ["your-security-group-id"]
