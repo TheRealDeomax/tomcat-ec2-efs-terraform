@@ -23,7 +23,23 @@ This project sets up an infrastructure on AWS using Terraform that includes EC2 
 3. **Clone the Repository**: Clone this repository to your local machine.
 
 4. **Customize Variables**: Copy `terraform.tfvars.example` to `terraform.tfvars` and customize the variables as needed.
+```
+   # Set AWS credentials as environment variables for Terraform
+   export TF_VAR_aws_access_key="access"
+   export TF_VAR_aws_secret_key="secret"
+   export TF_VAR_aws_region="us-east-1"
 
+   # Alternative: Set AWS credentials directly (Terraform will pick these up automatically)
+   export AWS_ACCESS_KEY_ID="access"
+   export AWS_SECRET_ACCESS_KEY="secret"
+   export AWS_DEFAULT_REGION="us-east-1"
+
+   # Additional Terraform variables for the project
+   export TF_VAR_project_name="tomcat-efs-cluster"
+   export TF_VAR_environment="dev"
+   export TF_VAR_instance_type="t3.medium"
+   export TF_VAR_key_pair_name="tcat"
+```
 5. **Initialize Terraform**: Navigate to the project directory and run:
    ```
    terraform init
